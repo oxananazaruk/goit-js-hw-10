@@ -30,7 +30,7 @@ export function fetchCatByBreed(breedId) {
 };
 
 export function makeCatCardMarkup(name, url, temperament, description) {
-    return `<img class="js-cat-img" src="${url}" alt="${name}" width="400"/>
+    return `<img class="js-cat-img" src="${url}" alt="${name}" width="500"/>
     <div class="card-wrap">
     <h2>${name}</h2>
     <p>${description}</p>
