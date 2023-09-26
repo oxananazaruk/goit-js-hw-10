@@ -1,5 +1,4 @@
 import axios from "axios";
-import SlimSelect from 'slim-select';
 axios.defaults.headers.common["x-api-key"] = "live_4LFtrKZ60t1sSxyWQIMaxwmXv2zlodstUsaDoW06kaYtPaMPvYTC90vu15TR1WnN";
 
 export function fetchBreeds() {
@@ -31,12 +30,10 @@ export function fetchCatByBreed(breedId) {
 };
 
 export function makeCatCardMarkup(name, url, temperament, description) {
-    return `
-    <img class="js-cat-img" src="${url}" alt="${name}" width="400"/>
-    <div class="js-cat-wrapper>
+    return `<img class="js-cat-img" src="${url}" alt="${name}" width="400"/>
+    <div class="card-wrap">
     <h2>${name}</h2>
-    <p>${temperament}</p>
     <p>${description}</p>
-    </div>
-   ` 
+    <p><span class="sub-title">Temperament:</span> ${temperament}</p>
+    </div>` 
 };
