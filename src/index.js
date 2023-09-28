@@ -1,8 +1,9 @@
 import SlimSelect from 'slim-select';
 import "../node_modules/slim-select/dist/slimselect.css";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { fetchBreeds, makeMarkupforSelect, fetchCatByBreed, makeCatCardMarkup } from "./cat-api.js";
-
+import { fetchBreeds, fetchCatByBreed } from "./cat-api.js";
+import { makeMarkupforSelect } from "./services/makeMarkupforSelect";
+import {  makeCatCardMarkup } from "./services/makeCatCardMarkup";
 
 const refs = {
     catInfo: document.querySelector('.cat-info'),
